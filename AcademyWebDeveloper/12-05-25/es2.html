@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Meta Tag Fondamentali -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sito ufficiale per la registrazione e la gestione di un evento tecnologico.">
+
+    <title>TechFuture Conference 2026</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>TechFuture Conference 2026</h1>
+        <p>Il più grande evento dedicato all’innovazione tecnologica e allo sviluppo software.</p>
+
+        <!-- Navigazione -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#programma">Programma</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenuto Principale -->
+    <main>
+
+        <!-- Sezione Home -->
+        <section id="home">
+            <h2>Benvenuto alla Conferenza</h2>
+
+            <div>
+                <p>
+                    La <span>TechFuture Conference</span> riunisce sviluppatori,
+                    aziende e professionisti IT provenienti da tutta Europa.
+                </p>
+
+                <p>
+                    Durante l’evento saranno presentate le ultime novità
+                    nel mondo dell’intelligenza artificiale, cloud computing,
+                    cybersecurity e sviluppo web.
+                </p>
+            </div>
+
+            <!-- Immagine -->
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                alt="Persone durante una conferenza tecnologica" width="600">
+        </section>
+
+        <!-- Sezione Programma -->
+        <section id="programma">
+            <h2>Programma Evento</h2>
+
+            <!-- Tabella Programma -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Orario</th>
+                        <th>Attività</th>
+                        <th>Relatore</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Apertura Evento</td>
+                        <td>Staff Organizzativo</td>
+                    </tr>
+
+                    <tr>
+                        <td>10:00</td>
+                        <td>Introduzione all'AI</td>
+                        <td>Marco Rossi</td>
+                    </tr>
+
+                    <tr>
+                        <td>12:00</td>
+                        <td>Cybersecurity Moderna</td>
+                        <td>Laura Bianchi</td>
+                    </tr>
+
+                    <tr>
+                        <td>15:00</td>
+                        <td>Workshop Cloud Computing</td>
+                        <td>Luca Verdi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sezione Registrazione -->
+        <section id="registrazione">
+            <h2>Iscrizione</h2>
+
+            <form action="#" method="post">
+
+                <!-- Nome -->
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+                </div>
+
+     
+                <!-- Email -->
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                </div>
+
+
+                <!-- Password -->
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Crea una password" required>
+                </div>
+
+                <!-- Checkbox -->
+                <div>
+                    <p>Argomenti di interesse:</p>
+
+                    <input type="checkbox" id="ai" name="interessi" value="AI">
+
+                    <label for="ai">Intelligenza Artificiale</label>
+
+                    <input type="checkbox" id="cloud" name="interessi" value="Cloud">
+
+                    <label for="cloud">Cloud Computing</label>
+
+                    <input type="checkbox" id="security" name="interessi" value="Cybersecurity">
+
+                    <label for="security">Cybersecurity</label>
+                </div>
+
+                <!-- Select -->
+                <div>
+                    <label for="ruolo">Ruolo Professionale:</label>
+
+                    <select id="ruolo" name="ruolo" required>
+                        <option value="">-- Seleziona --</option>
+                        <option value="studente">Studente</option>
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Project Manager</option>
+                    </select>
+                </div>
+
+
+                <!-- Textarea -->
+                <div>
+                    <label for="messaggio">Messaggio:</label>
+
+                    <textarea id="messaggio" name="messaggio" rows="5" cols="40"
+                        placeholder="Scrivi eventuali richieste o domande">
+                    </textarea>
+                </div>
+
+
+                <!-- Pulsante Invio -->
+                <button type="submit">Invio</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p> 2026 TechFuture Conference - Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+
+</html>

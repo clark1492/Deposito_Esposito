@@ -1,0 +1,29 @@
+p {
+    color: blue;
+    
+}
+
+p {
+    color: red;
+    font-family:cursive;
+}
+
+div {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: rgb(121, 121, 189);
+    font-size: 15px;
+}
+
+.testo {
+    color: orange;
+    
+}
+
+#titolo {
+    color: red;
+    font-size: 35px;
+}

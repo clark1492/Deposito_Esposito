@@ -1,0 +1,42 @@
+body {
+  background-color: #b9d6bc;
+  font-family: Arial, sans-serif;
+}
+
+/* classe box con un colore di background diverso dal resto del body */
+.box {
+  background-color: white;
+  padding: 20px;
+}
+
+h1 {
+  color: #e561b7;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+p {
+  color: rgb(82, 153, 160);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.misure {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.padding {
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+.border {
+  border: 5px solid black;
+}
+
+.margin {
+    margin: 20px;
+    background-color: rgb(238, 144, 144);
+}

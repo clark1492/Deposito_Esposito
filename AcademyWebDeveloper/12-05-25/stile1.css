@@ -1,0 +1,25 @@
+/* selettore generale degli elementi */
+p {
+    color: blue;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+div {
+    background-color: gold;
+}
+
+/* selettore classe */
+.evidenziato {
+    background-color: red;
+}
+/* selettore id */
+#email {
+    font-size: 50px;
+}
+
+div p {
+    color: green;
+}

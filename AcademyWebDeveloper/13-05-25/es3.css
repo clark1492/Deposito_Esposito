@@ -1,0 +1,45 @@
+/* selettori per tag */
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+p {
+    background-color: white;
+    border: 5px solid black;
+}
+/* selettori per classi */
+.titoli {
+    color: blue;
+}
+
+.sottotitoli {
+    color: brown;
+}
+
+/* selettori per id  */
+#text {
+    background-color: rgb(166, 105, 186);
+    padding: 30px;
+    margin: 5px;
+    width: 200px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#subtext {
+    background-color: rgb(164, 186, 105);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* selettore in conflitto */
+.sottotitoli {
+    color:greenyellow;
+}
+
+/* pseudoclasse su elemento interattivo  */
+a:hover {
+  color: red;
+}
