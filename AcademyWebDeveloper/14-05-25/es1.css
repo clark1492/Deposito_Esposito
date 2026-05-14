@@ -1,0 +1,76 @@
+/* dichiarazione variabili in css */
+:root {
+    /* variabili con -- iniziali */
+    --colore-principale: #3498db;
+    --colore-testo: #2c3e50;
+    --spaziatura: 20px;
+}
+
+.card {
+    background-color: var(--colore-principale);
+    padding: var(--spaziatura);
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    color: var(--colore-testo);
+}
+
+/* inserisce simbolo prima del testo del tag */
+.messaggio::before {
+    content: "⚠ ";
+    color: red;
+}
+
+/* inserisce simbolo dopo del testo del tag */
+.messaggio::after {
+    content: " ✔";
+    color: green;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+    /* crea un effetto fluido quando l’elemento cambia dimensione durante l’hover */
+    transition: transform 0.5s;
+    /* esegue l’animazione continuamente ogni 3 secondi */
+    animation: cambioColore 3s infinite;
+}
+
+.box:hover {
+    /* ingrandisce il box al passaggio del mouse */
+    transform: scale(1.2);
+}
+
+/* definisce un’animazione che modifica il colore dello sfondo nel tempo */
+/* ogni 3 seocndi cambio colore */
+@keyframes cambioColore {
+    0% {
+        background-color: steelblue;
+    }
+
+    50% {
+        background-color: coral;
+    }
+
+    100% {
+        background-color: steelblue;
+    }
+}
+
+/* visualizzato come elemento di blocco */
+.box1 {
+  display: block;
+  background-color: lightblue;
+}
+/* invisibile ma occupa sapzio nella pagina */
+.box2 {
+  visibility: hidden;
+  background-color: lightgreen;
+}
+/* invisibile e non occupa spazio nella pagina */
+.box3 {
+  display: none;
+  background-color: coral;
+}

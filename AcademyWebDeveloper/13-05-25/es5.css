@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    
+    /*l’unità fr (fraction), che divide lo spazio disponibile */
+    grid-template-columns: 250px 1fr;
+
+    grid-template-rows: 100px 1fr 80px;
+
+    /* aggiunge spazio tra righe e colonne */
+    gap: 10px;
+
+    height: 100vh;
+    padding: 10px;
+}
+
+
+header {
+    grid-area: header;
+
+    background-color: darkblue;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+
+aside {
+    grid-area: sidebar;
+
+    background-color: lightgray;
+    padding: 20px;
+
+    width: 90%;
+}
+
+
+main {
+    grid-area: main;
+
+    background-color: white;
+    padding: 20px;
+
+    position: relative;
+}
+
+
+footer {
+    grid-area: footer;
+
+    background-color: black;
+    color: white;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.badge {
+    
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    background-color: red;
+    color: white;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: darkblue;
+    color: white;
+}
