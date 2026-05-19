@@ -4,41 +4,48 @@ function avviaProgramma() {
     let arrayProdotti = [];
     let finito = false;
     console.log("Inserisci i prodotti di un catalogo di un magazzino.");
+    try {
+        while (!finito) {
 
-    while (!finito) {
-        console.log("Aggiungi nuovo prodotto");
-        let nomeProdotto = checkParola("Nome prodotto:");
-        let prezzoProdotto = checkFloatPositivo("Prezzo del prodotto:");
-        let quantitaProdotto = checkInteroPositivo("Quantita del prodotto:");
+            finito = checkBoolean("Vuoi aggiungere un nuovo prodotto? (si/no)");
 
-        let prodotto = creaOggetto(nomeProdotto, prezzoProdotto, quantitaProdotto);
-        arrayProdotti.push(prodotto);
-        finito = checkBoolean("Hai terminato? (si/no)")
+            if (!finito) {
+
+                let nomeProdotto = checkParola("Nome prodotto:");
+                let prezzoProdotto = checkFloatPositivo("Prezzo del prodotto:");
+                let quantitaProdotto = checkInteroPositivo("Quantita del prodotto:");
+
+                let prodotto = creaOggetto(nomeProdotto, prezzoProdotto, quantitaProdotto);
+                arrayProdotti.push(prodotto);
+                // finito = checkBoolean("Hai terminato? (si/no)");
+            }
+        }
+
+        let valoreTot = calcolaValoreTot(arrayProdotti);
+        let prodottoCaro = trovaProdottoCaro(arrayProdotti);
+        let arrayProdottiPositivi = filtraQuantitaPositiva(arrayProdotti);
+        let nomiProdotti = arrayNomi(arrayProdotti);
+
+
+        console.log("Il valore totale del magazzino è : ", valoreTot, " $");
+        console.log("Il prodotto più caro del magazzino è : ", prodottoCaro.nome, " ", prodottoCaro.prezzo, " $");
+
+        aggiuntaDisponibilita(arrayProdotti);
+
+
+        console.log("Prodotti disponibili nel magazzino : ");
+        arrayProdottiPositivi.forEach(prodotto => {
+            console.log(prodotto);
+        });
+
+        console.log("La lista dei prodotti (solo nomi) : ");
+        nomiProdotti.forEach(prodotto => {
+            console.log(prodotto);
+        });
+    } catch (errore) {
+        console.log("Non inserito nessun valore.")
     }
-
-    let valoreTot = calcolaValoreTot(arrayProdotti);
-    let prodottoCaro = trovaProdottoCaro(arrayProdotti);
-    let arrayProdottiPositivi = filtraQuantitaPositiva(arrayProdotti);
-    let nomiProdotti = arrayNomi(arrayProdotti);
-
-
-    console.log("Il valore totale del magazzino è : ", valoreTot," $");
-    console.log("Il prodotto più caro del magazzino è : ", prodottoCaro.nome, " ", prodottoCaro.prezzo, " $");
-
-    aggiuntaDisponibilita(arrayProdotti);
-
-    
-    console.log("Prodotti disponibili nel magazzino : ");
-    arrayProdottiPositivi.forEach(prodotto => {
-        console.log(prodotto);
-    });
-    
-    console.log("La lista dei prodotti (solo nomi) : ");
-    nomiProdotti.forEach(prodotto => {
-        console.log(prodotto);
-    });
-
-
+    console.log("Programma Terminato.")
 }
 
 avviaProgramma();
@@ -98,9 +105,9 @@ function filtraQuantitaPositiva(arrayProdotti) {
 }
 
 function aggiuntaDisponibilita(arrayProdotti) {
-    
-    for( let prodotto of arrayProdotti) {
-        if(prodotto.quantita > 0) {
+
+    for (let prodotto of arrayProdotti) {
+        if (prodotto.quantita > 0) {
             prodotto.disponibilita = true;
         }
         else {
@@ -125,11 +132,11 @@ function checkBoolean(messaggio) {
     do {
         parola = prompt(messaggio);
     }
-    while (parola !== "si" && parola != "no");
+    while (parola.trim().toLowerCase() !== "si" && parola.trim().toLowerCase() != "no");
 
-    return parola === "si" ? true : false;
+    return parola === "si" ? false : true;
 }
-
+// controlla che si sia digitata una parola e non un spazio bianco
 function checkParola(messaggio) {
 
     let parola;
@@ -140,7 +147,7 @@ function checkParola(messaggio) {
     while (parola === null || parola === "");
     return parola;
 }
-
+// controlla che si sia digitato un numero intero positivo
 function checkInteroPositivo(messaggio) {
     let input;
 
@@ -151,6 +158,7 @@ function checkInteroPositivo(messaggio) {
     return input;
 }
 
+// controlla che si sia digitato un numero con la virgola positivo
 function checkFloatPositivo(messaggio) {
 
     let numero;
@@ -163,6 +171,7 @@ function checkFloatPositivo(messaggio) {
     return numero;
 }
 
+// controlla che un array sia pieno
 function checkEmptyArray(array) {
     if (array.length === 0) {
         throw new Error("Array vuoto");
