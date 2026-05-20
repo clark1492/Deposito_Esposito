@@ -17,7 +17,7 @@ function avviaProgramma() {
 
                 let prodotto = creaOggetto(nomeProdotto, prezzoProdotto, quantitaProdotto);
                 arrayProdotti.push(prodotto);
-                // finito = checkBoolean("Hai terminato? (si/no)");
+                
             }
         }
 
@@ -27,18 +27,22 @@ function avviaProgramma() {
         let nomiProdotti = arrayNomi(arrayProdotti);
 
 
-        console.log("Il valore totale del magazzino è : ", valoreTot, " $");
-        console.log("Il prodotto più caro del magazzino è : ", prodottoCaro.nome, " ", prodottoCaro.prezzo, " $");
+        console.log("Il valore totale del magazzino è :", valoreTot, "$");
+        console.log("Il prodotto più caro del magazzino è :", prodottoCaro.nome,prodottoCaro.prezzo, "$");
 
         aggiuntaDisponibilita(arrayProdotti);
 
 
-        console.log("Prodotti disponibili nel magazzino : ");
+        console.log("Tutti i prodotti:");
+        arrayProdotti.forEach(prodotto => {
+            console.log(prodotto);
+        });
+        console.log("Prodotti disponibili nel magazzino :");
         arrayProdottiPositivi.forEach(prodotto => {
             console.log(prodotto);
         });
 
-        console.log("La lista dei prodotti (solo nomi) : ");
+        console.log("La lista dei prodotti (solo nomi) :");
         nomiProdotti.forEach(prodotto => {
             console.log(prodotto);
         });
