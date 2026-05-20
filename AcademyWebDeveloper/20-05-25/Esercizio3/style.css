@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#output {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.output-change {
+    font-size: 22px;
+    background-color:lightblue;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    /* serve a rendere graduale un cambiamento di stile invece che immediato */
+    transition: 0.3s;
+}
+
+.output-success {
+    font-size: 26px;
+    background-color:rgb(230, 191, 173);
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid transparent;
+    /* serve a rendere graduale un cambiamento di stile invece che immediato */
+    transition: 0.3s;
+}

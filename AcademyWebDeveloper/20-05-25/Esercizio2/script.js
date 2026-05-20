@@ -82,31 +82,36 @@ rimuoviBtn.addEventListener("click", () => {
 titleBtn.addEventListener("click", () => {
 
 
+    if (titolo.textContent === "Titolo Modificato") {
+        titolo.textContent = "Lista Dinamica";
+        titolo.style.color = "black";
+    } else {
 
+        // MODIFICA TESTO TITOLO
+        titolo.textContent = "Titolo Modificato";
 
-    // MODIFICA TESTO TITOLO
-    titolo.textContent = "Titolo Modificato";
+        // COLORE CASUALE
+        // Math.random crea numero randomico, Math.floor toglie i decimali, 16777215 = il valore massimo di un colore RGB in esadecimale, 
+        // lo trasforma in esadecimale con toString(16) i colori RGB iniziano con #
+        const coloreRandom =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
 
-    // COLORE CASUALE
-    // Math.random crea numero randomico, Math.floor toglie i decimali, 16777215 = il valore massimo di un colore RGB in esadecimale, 
-    // lo trasforma in esadecimale con toString(16) i colori RGB iniziano con #
-    const coloreRandom =
-        "#" + Math.floor(Math.random() * 16777215).toString(16);
+        titolo.style.color = coloreRandom;
 
-    titolo.style.color = coloreRandom;
-
-
-
+    }
 });
 
 sfondoBtn.addEventListener("click", () => {
     // MODIFICA DIV
+
+    // TODO: il toggle non funziona non so perche
     // box.classList.toggle("box-sfondo");
 
     if (box.style.backgroundColor === "lightblue") {
         box.style.backgroundColor = "white";
         box.style.border = "2px solid transparent";
-        
+        box.style.fontSize = "16px";
+
     } else {
         box.style.backgroundColor = "lightblue";
         box.style.border = "3px solid blue";
@@ -118,6 +123,7 @@ nascondiBtn.addEventListener("click", () => {
     // NASCONDI / MOSTRA
     if (box.style.display === "none") {
         box.style.display = "block";
+        
         nascondiBtn.textContent = "Nascondi div"
     } else {
         box.style.display = "none";

@@ -15,9 +15,8 @@ body {
     transition: 0.3s;
 }
 
-.titolo-classic {
-    content: "Lista Dinamica";
-    color : black;
+.titolo-modificato {
+    content: "Titolo Modificato";
 }
 
 #box {
@@ -43,6 +42,7 @@ input {
 button {
     padding: 10px;
     margin: 5px;
+    transition: 0.2s;
     cursor: pointer;
 }
 
@@ -53,6 +53,8 @@ button:hover {
 ul {
     margin-top: 20px;
     text-align: left;
+    /* non mostra il puntino */
+    list-style-type: none;
 }
 
 li {
