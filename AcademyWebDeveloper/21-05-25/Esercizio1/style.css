@@ -1,0 +1,91 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #dff5e1;
+     margin: 0;
+     padding: 0;
+     transition: 0.3s;
+ }
+
+ .container {
+     width: 80%;
+     margin: 40px auto;
+     text-align: center;
+ }
+
+ h1 {
+     color: #2d6a4f;
+ }
+
+ /* p {
+     color: #444;
+ } */
+
+ .buttons {
+     margin: 20px 0;
+ }
+
+ button {
+     padding: 10px 15px;
+     margin: 10px;
+     border: none;
+     border-radius: 8px;
+     background-color: #40916c;
+     color: white;
+     /* cursore con manina */
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ button:hover {
+     background-color: #1b4332;
+     transform: scale(1.05);
+ }
+
+ #divAnimali {
+     display: flex;
+     /* Propietà usata con flexbox,impone agli alementi 
+            di andare a capo qunado non c'è più spazio nella riga */
+     flex-wrap: wrap;
+
+     justify-content: center;
+     gap: 20px;
+     margin-top: 30px;
+ }
+
+ .animale {
+     background-color: white;
+     width: 220px;
+     padding: 15px;
+     border-radius: 12px;
+     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .animale img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 10px;
+     margin-bottom: 10px;
+ }
+
+ .leone {
+     border-left: 6px solid goldenrod;
+ }
+
+ .elefante {
+     border-left: 6px solid gray;
+ }
+
+ .tema-scuro {
+     background-color: #1b4332;
+     color: white;
+ }
+
+ .tema-scuro .animale{
+    background-color: #40916c;
+ }
+
+ .tema-scuro button:hover {
+     background-color:#2d6a4f;
+     transform: scale(1.05);
+ }

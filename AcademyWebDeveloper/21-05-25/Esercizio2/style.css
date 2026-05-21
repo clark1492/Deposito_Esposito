@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* margin-top: 10px; */
+    background-color: #444;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}

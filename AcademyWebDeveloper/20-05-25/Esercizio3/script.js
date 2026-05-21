@@ -17,6 +17,23 @@ function operazioneConPromise() {
         }, 2000);
     });
 }
+// setTimeout(funzione, millisecondi);
+// const promessa = new Promise((resolve, reject) => {
+
+//     // operazione
+
+// });
+// const promessa = new Promise((resolve, reject) => {
+
+//     let successo = true;
+
+//     if (successo) {
+//         resolve("Operazione riuscita");
+//     } else {
+//         reject("Errore");
+//     }
+
+// });
 
 // ASYNC / AWAIT
 async function caricaDati() {
