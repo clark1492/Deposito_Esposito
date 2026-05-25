@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyStore - Pannello Magico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">🧸 Aggiungi Giocattolo</a>
+        <a href="catalogo.html">🚀 Visualizza Catalogo</a>
+        <a href="riepilogo.html">📊 Riepilogo Negozio</a>
+    </nav>
+
+    <h1>📊 Il Pannello Statistiche del Negozio 🔍</h1>
+
+    <div class="dashboard">
+        <div class="card totale">
+            <h3>Count Giocattoli Totali</h3>
+            <div class="valore" id="totaleGiocattoli">0</div>
+            <small>Pezzi unici inseriti</small>
+        </div>
+
+        <div class="card prezzo">
+            <h3>Prezzo Medio</h3>
+            <div class="valore" id="prezzoMedio">0.00 €</div>
+            <small>Valore medio dei giochi</small>
+        </div>
+
+        <div class="card categorie">
+            <h3>Reparti / Categorie</h3>
+            <div id="listaCategorie" style="margin-top:15px;">Nessuna</div>
+        </div>
+
+        <div class="card allerta">
+            <h3>🚨 Scorte Esaurite (Da Riordinare)</h3>
+            <div id="listaNonDisponibili" style="margin-top:15px;">Nessuno</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

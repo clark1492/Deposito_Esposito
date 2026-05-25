@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Gaming</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-box">
+            <img id="logo" src="https://cdn.pixabay.com/photo/2024/01/25/06/56/gaming-logo-8531094_1280.png" alt="Logo Dashboard Gaming">
+            <h1>Dashboard Gaming</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profilo</a></li>
+                <li><a href="#">Contatti</a></li>
+
+            </ul>
+            <button id="temaButton">
+                Cambia tema
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <h2>Benvenuto nella Dashboard Gaming!</h2>
+            <p>Qui puoi trovare tutte le informazioni sui tuoi giochi preferiti, le ultime notizie e le offerte
+                speciali.</p>
+        </div>
+        <div class="box">
+            <h2>Inserisci i tuoi dati</h2>
+            <div class="box-form">
+                <form id="userForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="gameSlect">Piattaforma preferita:</label>
+                    <select id="gameSelect" name="gameSelect" required>
+                        <option value="">Seleziona una piattaforma</option>
+                        <option value="pc">Pc</option>
+                        <option value="playstation">Playstation</option>
+                        <option value="xbox">Xbox</option>
+                    </select><br><br>
+                    <label for="gameInput">Gioco preferito:</label>
+                    <input type="text" id="gameInput" name="gameInput" placeholder="Inserisci il tuo gioco preferito"
+                        required><br><br>
+                    <input type="submit" class="submitButton" value="Invia">
+                </form>
+                <button id="resetButton">
+                    Reset
+                </button>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Informazioni salvate</h2>
+            <ul id="userList"></ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dashboard Gaming. Tutti i diritti riservati.</p>
+    </footer>
+    <script src="script.js" async defer></script>
+</body>
+
+</html>
