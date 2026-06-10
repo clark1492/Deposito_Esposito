@@ -1,0 +1,10 @@
+<h1>Product Card</h1>
+<h2>{{ name }}</h2>
+<h2> {{ brand }}</h2>
+<img [src]="imageUrl" alt="{{ name }}" width="200"  height="300">
+<h2>Prezzo : {{finalPrice()}} €</h2>
+<h3>{{ tags.join(', ') }}</h3>
+<p>{{ available ? 'Disponibile' : 'Non disponibile' }}</p>
+<button (click)="compra()">{{available ? 'Compra' : 'Esaurito'}}</button>
+<br/>
+<input [(ngModel)]="name" placeholder="Enter new product name">
