@@ -1,0 +1,18 @@
+button {
+  margin-top: 1rem;
+}
+.rosso {
+  background-color: #ffcccc;
+  border: 2px solid red;
+  padding: 10px;
+}
+.giallo {
+  background-color: #ffffcc;
+  border: 2px solid yellow;
+  padding: 10px;
+}
+.verde {
+  background-color: #ccffcc;
+  border: 2px solid green;
+  padding: 10px;
+}

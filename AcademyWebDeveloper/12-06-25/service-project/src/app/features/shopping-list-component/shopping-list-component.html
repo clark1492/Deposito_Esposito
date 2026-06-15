@@ -1,0 +1,12 @@
+<h1>ShoppingListComponent</h1>
+
+<ul>
+  @for (item of items; track $index) {
+    <li>
+      {{ item }}
+      <button (click)="removeItem($index)">
+        Rimuovi
+      </button>
+    </li>
+  }
+</ul>

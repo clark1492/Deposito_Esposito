@@ -1,0 +1,20 @@
+<h1>Calcolatore IVA</h1>
+
+<p>PrezzoNetto : {{prezzoNetto()}} $</p>
+<p>AliquotaIVA : {{aliquotaIva()}} %</p>
+<p>prezzoLordo : {{prezzoLordo()}} $</p>
+
+<p>Cambia prezzo netto:</p>
+<input type="number" [value] = "prezzoNetto()" (input)="updatePrice($event)">
+
+
+<!-- Esercizio 2 — Calcolatore IVA con Computed Signal
+Obiettivo: Usare computed() per derivare un valore automaticamente da un signal.
+Istruzioni:
+Crea un componente PriceComponent che:
+1.Dichiara un signal prezzoNetto inizializzato a 100 usando signal(100)
+2.Dichiara un signal aliquotaIva inizializzato a 22 (percentuale)
+3.Crea un signal prezzoLordo con computed() che calcola automaticamente: prezzoNetto() * (1 + aliquotaIva() / 100)
+4.Mostra nel template tutti e tre i valori: prezzo netto, aliquota IVA e prezzo lordo
+5.Aggiunge un input <input type="number"> collegato a prezzoNetto tramite un event binding (input) che chiama .set() con il
+nuovo valore -->

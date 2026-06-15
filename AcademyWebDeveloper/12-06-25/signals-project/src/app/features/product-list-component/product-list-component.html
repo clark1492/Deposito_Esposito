@@ -1,0 +1,12 @@
+<h1>ProductListComponent</h1>
+<h2>ParentComponent</h2>
+
+@for (prodotto of prodotti; track prodotto.nome) {
+
+  <app-product-card-component
+    [nome]="prodotto.nome"
+    [prezzo]="prodotto.prezzo"
+    [disponibile]="prodotto.disponibile">
+  </app-product-card-component>
+
+}

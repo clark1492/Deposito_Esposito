@@ -1,0 +1,10 @@
+div {
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}

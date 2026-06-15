@@ -1,0 +1,10 @@
+<h1>StarRatingComponent</h1>
+
+<div>
+  <!-- crea un array di lunghezza massimo() -->
+  @for (stella of [].constructor(massimo()); let i = $index; track stella) {
+    <span (click)="inviaVoto(i + 1)" style="cursor: pointer; font-size: 24px;">
+      ★
+    </span>
+  }
+</div>

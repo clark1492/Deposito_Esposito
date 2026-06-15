@@ -1,0 +1,7 @@
+<h1>FeedbackComponent</h1>
+<app-star-rating-component [massimo]="massimo" (votoSelezionato)="onVoto($event)"></app-star-rating-component>
+@if (voto > 0) {
+  <p>Hai dato un voto di {{ voto }} su {{ massimo }}</p>
+} @else {
+  <p>Nessun voto ancora assegnato</p>
+}

@@ -1,0 +1,14 @@
+<h1>ProductCard</h1>
+<h2>ChildComponent</h2>
+
+<div class="card">
+  <h3>{{ nome() }}</h3>
+
+  <p>Prezzo: {{ prezzo() }} €</p>
+
+  @if (disponibile()) {
+    <p>Disponibile</p>
+  } @else {
+    <p>Esaurito</p>
+  }
+</div>

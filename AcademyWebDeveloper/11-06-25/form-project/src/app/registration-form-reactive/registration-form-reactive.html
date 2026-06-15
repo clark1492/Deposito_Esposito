@@ -1,0 +1,42 @@
+<h1>Reactive Form</h1>
+
+<form [formGroup]="mailForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>oggetto: </label>
+    <input formControlName="oggetto" />
+    @if (mailForm.get('oggetto')?.invalid && mailForm.get('oggetto')?.touched) {
+      <p style="color: red">Inserire un oggetto</p>
+    }
+  </div>
+  <div>
+    <label>messaggio: </label>
+    <textarea formControlName="messaggio"></textarea>
+    <p>Minimo 10 caratteri</p>
+    <p>Caratteri attuali: {{ mailForm.get('messaggio')?.value?.length || 0 }}</p>
+    @if (mailForm.get('messaggio')?.invalid && mailForm.get('messaggio')?.touched) {
+      <p style="color: red">Inserire un messaggio</p>
+    }
+  </div>
+  <div>
+    <label>urgenza: </label>
+    <select formControlName="urgenza">
+      <option value="bassa">bassa</option>
+      <option value="media">media</option>
+      <option value="alta">alta</option>
+    </select>
+    @if (mailForm.get('urgenza')?.invalid && mailForm.get('urgenza')?.touched) {
+      <p style="color: red">Inserire l'urgenza</p>
+    }
+  </div>
+  <button type="submit" [disabled]="!mailForm.valid">Invia</button>
+</form>
+
+@if (submitted) {
+  <h2 style="color: green">Form valido</h2>
+  
+  <div class="card-success">
+    <p>oggetto: {{ mailForm.value.oggetto }}</p>
+    <p>messaggio: {{ mailForm.value.messaggio }}</p>
+    <p>urgenza: {{ mailForm.value.urgenza }}</p>
+  </div>
+}
